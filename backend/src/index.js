@@ -25,7 +25,7 @@ app.use("/api", apiRoutes);
 app.post("/ussd", ussdController.handleUSSD);
 
 // 5. Start Server
-const PORT = process.env.PORT || 5000;
+const PORT = process.env.PORT || 5100;
 app.listen(PORT, () => {
   console.log(`🚀 Nexus Backend running on port ${PORT}`);
 });
