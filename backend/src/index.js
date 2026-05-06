@@ -3,8 +3,8 @@ const cors = require("cors");
 require("dotenv").config();
 
 // 1. Import Routes and Controllers
-const apiRoutes = require("./src/routes/api.routes");
-const ussdController = require("../src/controllers/ussd.controller"); // MUST IMPORT THIS
+const apiRoutes = require("./routes/api");
+const ussdController = require("./controllers/ussd.controller"); // MUST IMPORT THIS
 
 const app = express();
 
