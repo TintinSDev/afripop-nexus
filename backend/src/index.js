@@ -9,10 +9,17 @@ const ussdController = require("./controllers/ussd.controller"); // MUST IMPORT 
 const app = express();
 
 // 2. Middleware
+// src/index.js (or your main server file)
 app.use(
   cors({
-    origin: "https://nexus1-virid.vercel.app", // Remove trailing /
+    origin: [
+      "https://nexus1-virid.vercel.app",
+      "http://localhost:3000",
+      /\.vercel\.app$/,
+    ],
     credentials: true,
+    methods: ["GET", "POST", "PUT", "DELETE", "OPTIONS"],
+    allowedHeaders: ["Content-Type", "Authorization"],
   }),
 );
 // Secure for your Next.js app
