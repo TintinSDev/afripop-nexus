@@ -13,7 +13,9 @@ export default function PropertiesPage() {
 
   const fetchProperties = async () => {
     try {
-      const res = await fetch("http://localhost:5100/api/properties");
+      const res = await fetch(
+        "https://nexusbackend-six.vercel.app/api/properties",
+      );
       const data = await res.json();
       setProperties(data.properties || []);
     } catch (err) {
@@ -28,15 +30,18 @@ export default function PropertiesPage() {
     if (!phone) return;
 
     try {
-      const res = await fetch("http://localhost:5100/api/buy-fraction", {
-        method: "POST",
-        headers: { "Content-Type": "application/json" },
-        body: JSON.stringify({
-          propertyId: propId,
-          amount: price,
-          phoneNumber: phone,
-        }),
-      });
+      const res = await fetch(
+        "https://nexusbackend-six.vercel.app/api/buy-fraction",
+        {
+          method: "POST",
+          headers: { "Content-Type": "application/json" },
+          body: JSON.stringify({
+            propertyId: propId,
+            amount: price,
+            phoneNumber: phone,
+          }),
+        },
+      );
       const data = await res.json();
       alert(data.message || "Investment successful!");
       fetchProperties(); // Refresh list
