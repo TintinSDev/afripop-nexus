@@ -1,7 +1,7 @@
 {
   "version": 2,
   "buildCommand": "npm run build",
-  "outputDirectory": "dist",
+  "outputDirectory": "frontend/.next",
   "rewrites": [
     {
       "source": "/:path((?!_next/static|favicon.ico).*)",
