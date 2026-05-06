@@ -14,7 +14,7 @@ export default function PropertiesPage() {
   const fetchProperties = async () => {
     try {
       const res = await fetch(
-        "https://nexusbackend-six.vercel.app/api/properties",
+        "https://nexusbackend-khaki.vercel.app/api/properties",
       );
       const data = await res.json();
       setProperties(data.properties || []);
@@ -31,7 +31,7 @@ export default function PropertiesPage() {
 
     try {
       const res = await fetch(
-        "https://nexusbackend-six.vercel.app/api/buy-fraction",
+        "https://nexusbackend-khaki.vercel.app/api/buy-fraction",
         {
           method: "POST",
           headers: { "Content-Type": "application/json" },

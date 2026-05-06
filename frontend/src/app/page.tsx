@@ -12,7 +12,7 @@ export default function Home() {
   });
 
   useEffect(() => {
-    fetch("https://nexusbackend-six.vercel.app/api/stats")
+    fetch("https://nexusbackend-khaki.vercel.app/api/stats")
       .then((res) => res.json())
       .then((data) => setStats(data))
       .catch((err) => console.error("Stats fetch failed", err));
