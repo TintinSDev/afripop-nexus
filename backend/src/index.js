@@ -9,7 +9,8 @@ const ussdController = require("./controllers/ussd.controller"); // MUST IMPORT 
 const app = express();
 
 // 2. Middleware
-app.use(cors({ origin: "http://localhost:3000" })); // Secure for your Next.js app
+app.use(cors({ origin: "https://nexus1-virid.vercel.app/" }));
+// Secure for your Next.js app
 app.use(express.json());
 app.use(express.urlencoded({ extended: false }));
 

@@ -21,7 +21,7 @@ export default function InvestPage() {
     setResult(null);
 
     try {
-      const response = await fetch("http://localhost:5100/api/valuate", {
+      const response = await fetch("https://nexusbackend-six.vercel.app/api/valuate", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify(formData),
