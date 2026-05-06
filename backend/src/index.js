@@ -28,7 +28,7 @@ app.use(express.urlencoded({ extended: false }));
 
 // 3. Health Check
 app.get("/", (req, res) => {
-  res.send("AfriProp Nexus API is running... 🚀");
+  res.json({ status: "online", project: "AfriProp Nexus" });
 });
 
 // 4. Routes
